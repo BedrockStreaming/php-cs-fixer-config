@@ -1,0 +1,25 @@
+{
+    "name": "m6web/php-cs-fixer-config",
+    "description": "PHP CS Fixer config for M6Web components",
+    "keywords": ["CS", "CodingStyle"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "M6Web",
+            "email": "opensource@m6web.fr",
+            "homepage": "http://tech.m6web.fr/"
+        }
+    ],
+    "require": {
+        "friendsofphp/php-cs-fixer": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "M6Web\\CS\\Config\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
