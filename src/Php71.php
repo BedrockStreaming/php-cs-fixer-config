@@ -26,7 +26,7 @@ final class Php71 extends Config
             ],
             'heredoc_to_nowdoc' => false,
             'phpdoc_summary' => false,
-            'increment_style' => 'post',
+            'increment_style' => ['style' => 'post'],
             'yoda_style' => false,
         ];
 
