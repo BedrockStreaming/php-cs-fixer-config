@@ -28,6 +28,7 @@ final class Php71 extends Config
             'phpdoc_summary' => false,
             'increment_style' => ['style' => 'post'],
             'yoda_style' => false,
+            'ordered_imports' => ['sort_algorithm' => 'alpha'],
         ];
 
         return $rules;
