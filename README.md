@@ -19,7 +19,7 @@ Create a configuration file `.php_cs` in the root of your project:
 ```php
 <?php
 
-$config = new M6Web\CS\Config\Php71;
+$config = new M6Web\CS\Config\Php72;
 
 $config->getFinder()
     ->in([
