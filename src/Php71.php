@@ -29,6 +29,10 @@ final class Php71 extends Config
             'increment_style' => ['style' => 'post'],
             'yoda_style' => false,
             'ordered_imports' => ['sort_algorithm' => 'alpha'],
+            'phpdoc_line_span' => [
+                'property' => 'single',
+                'const' => 'single',
+            ],
         ];
 
         return $rules;
