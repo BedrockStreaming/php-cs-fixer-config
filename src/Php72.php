@@ -33,6 +33,7 @@ final class Php72 extends Config
                 'property' => 'single',
                 'const' => 'single',
             ],
+            'single_line_throw' => false,
         ];
 
         return $rules;
