@@ -20,19 +20,19 @@ final class BedrockStreaming extends Config
             'array_syntax' => [
                 'syntax' => 'short',
             ],
-            'no_unreachable_default_argument_value' => false,
             'braces' => [
                 'allow_single_line_closure' => true,
             ],
             'heredoc_to_nowdoc' => false,
-            'phpdoc_summary' => false,
             'increment_style' => ['style' => 'post'],
-            'yoda_style' => false,
+            'no_unreachable_default_argument_value' => false,
             'ordered_imports' => ['sort_algorithm' => 'alpha'],
             'phpdoc_line_span' => [
                 'property' => 'single',
                 'const' => 'single',
             ],
+            'phpdoc_summary' => false,
+            'yoda_style' => false,
         ];
 
         return $rules;
