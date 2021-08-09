@@ -6,9 +6,9 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "M6Web",
-            "email": "opensource@m6web.fr",
-            "homepage": "http://tech.m6web.fr/"
+            "name": "Bedrock",
+            "email": "opensource@bedrockstreaming.com",
+            "homepage": "https://tech.bedrockstreaming.com/"
         }
     ],
     "require": {
