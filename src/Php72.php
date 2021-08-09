@@ -16,7 +16,7 @@ final class Php72 extends Config
         $this->setRiskyAllowed(true);
     }
 
-    public function getRules()
+    public function getRules(): array
     {
         $rules = [
             '@Symfony' => true,
