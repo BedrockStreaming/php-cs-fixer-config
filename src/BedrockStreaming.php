@@ -23,6 +23,11 @@ final class BedrockStreaming extends Config
             'braces' => [
                 'allow_single_line_closure' => true,
             ],
+            'global_namespace_import' => [
+                'import_classes' => false,
+                'import_constants' => false,
+                'import_functions' => false,
+            ],
             'heredoc_to_nowdoc' => false,
             'increment_style' => ['style' => 'post'],
             'no_unreachable_default_argument_value' => false,
@@ -32,6 +37,7 @@ final class BedrockStreaming extends Config
                 'const' => 'single',
             ],
             'phpdoc_summary' => false,
+            'single_line_throw' => false,
             'yoda_style' => false,
         ];
 
