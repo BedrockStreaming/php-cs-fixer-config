@@ -4,6 +4,9 @@ namespace M6Web\CS\Config;
 
 use PhpCsFixer\Config;
 
+/**
+ * @deprecated Use M6Web\CS\Config\BedrockStreaming
+ */
 final class Php73 extends Config
 {
     public function __construct()

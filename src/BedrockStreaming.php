@@ -4,14 +4,11 @@ namespace M6Web\CS\Config;
 
 use PhpCsFixer\Config;
 
-/**
- * @deprecated Use M6Web\CS\Config\BedrockStreaming
- */
-final class Php71 extends Config
+final class BedrockStreaming extends Config
 {
     public function __construct()
     {
-        parent::__construct('M6Web (PHP 7.1)');
+        parent::__construct('Bedrock Streaming');
 
         $this->setRiskyAllowed(true);
     }
