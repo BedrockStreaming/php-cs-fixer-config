@@ -14,30 +14,32 @@ $ composer require --dev m6web/php-cs-fixer-config
 
 ### Configuration
 
-Create a configuration file `.php_cs` in the root of your project:
+Create a configuration file `.php-cs-fixer.dist.php` in the root of your project:
 
 ```php
 <?php
 
-$config = new M6Web\CS\Config\Php72;
+$finder = PhpCsFixer\Finder::create()
+    ->in(
+        [
+            __DIR__.'/src',
+            __DIR__.'/tests',
+        ]
+    );
 
-$config->getFinder()
-    ->in([
-        __DIR__.'/src'
-    ])->exclude([
-        'Tests'
-    ]);
+$config = new M6Web\CS\Config\BedrockStreaming();
+$config->setFinder($finder);
 
 return $config;
 ```
 
 ### Git
 
-Add `.php_cs.cache` (this is the cache file created by `php-cs-fixer`) to `.gitignore`:
+Add `.php-cs-fixer.cache` (this is the cache file created by `php-cs-fixer`) to `.gitignore`:
 
 ```
 vendor/
-.php_cs.cache
+.php-cs-fixer.cache
 ```
 
 ### Makefile
@@ -81,7 +83,7 @@ $ make cs-ci
 
 ## Credits
 
-Developed by [M6Web](http://tech.m6web.fr/), inspired by [refinery29/php-cs-fixer-config](https://github.com/refinery29/php-cs-fixer-config).
+Developed by [Bedrock Streaming](https://tech.bedrockstreaming.com), inspired by [refinery29/php-cs-fixer-config](https://github.com/refinery29/php-cs-fixer-config).
 
 ## License
 
