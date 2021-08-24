@@ -4,6 +4,9 @@ namespace M6Web\CS\Config;
 
 use PhpCsFixer\Config;
 
+/**
+ * @deprecated Use M6Web\CS\Config\BedrockStreaming
+ */
 final class Php71 extends Config
 {
     public function __construct()
@@ -13,7 +16,7 @@ final class Php71 extends Config
         $this->setRiskyAllowed(true);
     }
 
-    public function getRules()
+    public function getRules(): array
     {
         $rules = [
             '@Symfony' => true,

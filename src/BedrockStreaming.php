@@ -4,14 +4,11 @@ namespace M6Web\CS\Config;
 
 use PhpCsFixer\Config;
 
-/**
- * @deprecated Use M6Web\CS\Config\BedrockStreaming
- */
-final class Php74 extends Config
+final class BedrockStreaming extends Config
 {
     public function __construct()
     {
-        parent::__construct('M6Web (PHP 7.4)');
+        parent::__construct('Bedrock Streaming');
 
         $this->setRiskyAllowed(true);
     }
@@ -23,19 +20,25 @@ final class Php74 extends Config
             'array_syntax' => [
                 'syntax' => 'short',
             ],
-            'no_unreachable_default_argument_value' => false,
             'braces' => [
                 'allow_single_line_closure' => true,
             ],
+            'global_namespace_import' => [
+                'import_classes' => false,
+                'import_constants' => false,
+                'import_functions' => false,
+            ],
             'heredoc_to_nowdoc' => false,
-            'phpdoc_summary' => false,
             'increment_style' => ['style' => 'post'],
-            'yoda_style' => false,
+            'no_unreachable_default_argument_value' => false,
             'ordered_imports' => ['sort_algorithm' => 'alpha'],
             'phpdoc_line_span' => [
                 'property' => 'single',
                 'const' => 'single',
             ],
+            'phpdoc_summary' => false,
+            'single_line_throw' => false,
+            'yoda_style' => false,
         ];
 
         return $rules;
