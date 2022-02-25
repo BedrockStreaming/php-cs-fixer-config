@@ -1,0 +1,14 @@
+name: Continuous Integration
+on: [push]
+
+jobs:
+  linter:
+    name: Code style
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@master
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: 7.4
+      - run: composer install --prefer-dist --no-interaction
+      - run: vendor/bin/php-cs-fixer fix --ansi --dry-run --using-cache=no --verbose
