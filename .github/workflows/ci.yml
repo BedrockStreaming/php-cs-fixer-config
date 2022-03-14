@@ -5,10 +5,13 @@ jobs:
   linter:
     name: Code style
     runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        php-version: [ '7.4', '8.0', '8.1' ]
     steps:
       - uses: actions/checkout@master
       - uses: shivammathur/setup-php@v2
         with:
-          php-version: 7.4
+          php-version: ${{ matrix.php-version }}
       - run: composer install --prefer-dist --no-interaction
       - run: vendor/bin/php-cs-fixer fix --ansi --dry-run --using-cache=no --verbose
