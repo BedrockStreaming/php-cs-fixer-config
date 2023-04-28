@@ -33,6 +33,33 @@ $config->setFinder($finder);
 return $config;
 ```
 
+#### Adding extra rules:
+
+In case you wish to add some more rules (be more restrictive / apply project level rules), the `M6Web\CS\Config\BedrockStreaming` configuration accepts them as a constructor argument.
+
+⚠️ This feature does not allow any override. ⚠️
+
+```php
+<?php
+
+$finder = PhpCsFixer\Finder::create()
+    ->in(
+        [
+            __DIR__.'/src',
+            __DIR__.'/tests',
+        ]
+    );
+
+$config = new M6Web\CS\Config\BedrockStreaming([
+        'native_function_invocation' => ['scope' => 'all'],
+    ]
+);
+$config->setFinder($finder);
+
+return $config;
+```
+
+
 ### Git
 
 Add `.php-cs-fixer.cache` (this is the cache file created by `php-cs-fixer`) to `.gitignore`:

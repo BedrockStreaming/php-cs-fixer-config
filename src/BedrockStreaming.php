@@ -8,16 +8,20 @@ use PhpCsFixer\Config;
 
 final class BedrockStreaming extends Config
 {
-    public function __construct()
+    /** @var array */
+    private $extraRules;
+
+    public function __construct(array $extraRules = [])
     {
         parent::__construct('Bedrock Streaming');
 
+        $this->extraRules = $extraRules;
         $this->setRiskyAllowed(true);
     }
 
     public function getRules(): array
     {
-        $rules = [
+        $standardRules = [
             '@Symfony' => true,
             'array_syntax' => [
                 'syntax' => 'short',
@@ -46,6 +50,8 @@ final class BedrockStreaming extends Config
             'yoda_style' => false,
         ];
 
-        return $rules;
+        $newRules = \array_diff_key($this->extraRules, $standardRules);
+
+        return \array_merge($newRules, $standardRules);
     }
 }
