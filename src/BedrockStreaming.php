@@ -33,6 +33,7 @@ final class BedrockStreaming extends Config
             ],
             'heredoc_to_nowdoc' => false,
             'increment_style' => ['style' => 'post'],
+            'native_function_invocation' => ['strict' => false],
             'no_superfluous_phpdoc_tags' => ['allow_mixed' => true],
             'no_unreachable_default_argument_value' => false,
             'ordered_imports' => ['sort_algorithm' => 'alpha'],
