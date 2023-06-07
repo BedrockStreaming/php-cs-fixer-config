@@ -33,6 +33,43 @@ $config->setFinder($finder);
 return $config;
 ```
 
+### Custom configuration
+
+You may extend these rules and apply your own extra rules.
+
+Create a configuration file `.php-cs-fixer.dist.php` in the root of your project:
+
+```php
+<?php
+
+$finder = PhpCsFixer\Finder::create()
+    ->in([
+        __DIR__.'/src',
+        __DIR__.'/tests',
+    ]);
+
+$config = new class() extends PhpCsFixer\Config {
+    public function __construct()
+    {
+        parent::__construct('customized Bedrock Streaming');
+        $this->setRiskyAllowed(true);
+    }
+    
+    public function getRules(): array
+    {
+        $rules = (new M6Web\CS\Config\BedrockStreaming())->getRules();
+        
+        // perform updates on the rules array here
+        
+        return $rules;
+    }
+};
+
+$config->setFinder($finder);
+
+return $config;
+```
+
 ### Git
 
 Add `.php-cs-fixer.cache` (this is the cache file created by `php-cs-fixer`) to `.gitignore`:
