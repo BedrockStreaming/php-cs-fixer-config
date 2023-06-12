@@ -22,9 +22,6 @@ final class BedrockStreaming extends Config
             'array_syntax' => [
                 'syntax' => 'short',
             ],
-            'braces' => [
-                'allow_single_line_closure' => true,
-            ],
             'declare_strict_types' => true,
             'global_namespace_import' => [
                 'import_classes' => false,
