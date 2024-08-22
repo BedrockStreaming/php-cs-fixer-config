@@ -42,6 +42,7 @@ final class BedrockStreaming extends Config
             'phpdoc_summary' => false,
             'single_line_throw' => false,
             'yoda_style' => false,
+            'trailing_comma_in_multiline' => ['elements' => ['arguments', 'arrays', 'match', 'parameters']],
         ];
 
         return $rules;
