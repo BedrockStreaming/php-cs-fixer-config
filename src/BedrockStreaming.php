@@ -50,7 +50,7 @@ final class BedrockStreaming extends Config
             'no_whitespace_before_comma_in_array' => ['after_heredoc' => true],
             'method_argument_space' => ['after_heredoc' => true, 'on_multiline' => 'ensure_fully_multiline', 'attribute_placement' => 'ignore'],
             'heredoc_indentation' => true,
-            'visibility_required' => true,
+            'modifier_keywords' => ['elements' => ['const, 'method', 'property']],
             'list_syntax' => true,
             'ternary_to_null_coalescing' => true,
         ];
